@@ -1,0 +1,10 @@
+'.source.js':
+  'Component stylemanager on context':
+    'prefix': 'csm'
+    'body': """
+      import customPropTypes from 'material-ui/utils/customPropTypes'
+
+      ${1:ComponentName}.contextTypes = {
+        styleManager: customPropTypes.muiRequired,
+      }
+    """

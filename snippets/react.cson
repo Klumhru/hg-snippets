@@ -1,0 +1,29 @@
+'.source.js':
+  'React Stateless Component':
+    'prefix': 'rsc'
+    'body': """
+      const ${1:ComponentName} = (props${2:, context}) => {
+        return (
+          <div>${3}</div>
+        )
+      }
+
+      export default ${1:ComponentName}
+
+    """
+  'Import React':
+    'prefix': 'rip'
+    'body': """
+      import React from 'react'
+      import PropTypes from 'prop-types'
+
+
+    """
+  'React PropTypes':
+    'prefix': 'rpt'
+    'body': """
+      ${1:Component}.propTypes = {
+        ${2:prop}: PropTypes.${3:type}.isRequired,
+      }
+
+    """
