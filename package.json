@@ -1,0 +1,20 @@
+{
+  "name": "hg-snippets",
+  "main": "./lib/hg-snippets",
+  "version": "0.0.0",
+  "description": "A collection of snippets I use a lot",
+  "keywords": [
+    "react",
+    "snippets",
+    "go"
+  ],
+  "activationCommands": {
+  },
+  "repository": "https://github.com/klumhru/hg-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
