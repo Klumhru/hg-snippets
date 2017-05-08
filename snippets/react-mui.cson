@@ -1,6 +1,6 @@
 '.source.js':
   'Component stylemanager on context':
-    'prefix': 'csm'
+    'prefix': 'rmsm'
     'body': """
       import customPropTypes from 'material-ui/utils/customPropTypes'
 

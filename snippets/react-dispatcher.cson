@@ -1,0 +1,132 @@
+'.source.js':
+  'Dispatcher action set':
+    'prefix': 'das'
+    'body': """
+
+      export const ${1:RESOURCE}_CREATE_START = '${1:RESOURCE}_CREATE_START'
+      export const ${1:RESOURCE}_CREATE_REQUEST = '${1:RESOURCE}_CREATE_REQUEST'
+      export const ${1:RESOURCE}_CREATE_SUCCESS = '${1:RESOURCE}_CREATE_SUCCESS'
+      export const ${1:RESOURCE}_CREATE_FAILURE = '${1:RESOURCE}_CREATE_FAILURE'
+
+      export const ${1:RESOURCE}_DELETE_START = '${1:RESOURCE}_DELETE_START'
+      export const ${1:RESOURCE}_DELETE_REQUEST = '${1:RESOURCE}_DELETE_REQUEST'
+      export const ${1:RESOURCE}_DELETE_SUCCESS = '${1:RESOURCE}_DELETE_SUCCESS'
+      export const ${1:RESOURCE}_DELETE_FAILURE = '${1:RESOURCE}_DELETE_FAILURE'
+
+      export const ${1:RESOURCE}_UPDATE_START = '${1:RESOURCE}_UPDATE_START'
+      export const ${1:RESOURCE}_UPDATE_REQUEST = '${1:RESOURCE}_UPDATE_REQUEST'
+      export const ${1:RESOURCE}_UPDATE_SUCCESS = '${1:RESOURCE}_UPDATE_SUCCESS'
+      export const ${1:RESOURCE}_UPDATE_FAILURE = '${1:RESOURCE}_UPDATE_FAILURE'
+
+      export const ${1:RESOURCE}S_FETCH_START = '${1:RESOURCE}S_FETCH_START'
+      export const ${1:RESOURCE}S_FETCH_REQUEST = '${1:RESOURCE}S_FETCH_REQUEST'
+      export const ${1:RESOURCE}S_FETCH_SUCCESS = '${1:RESOURCE}S_FETCH_SUCCESS'
+      export const ${1:RESOURCE}S_FETCH_FAILURE = '${1:RESOURCE}S_FETCH_FAILURE'
+
+
+      export const ${2:resource}CreateStart = () => ({
+        type: ${1:RESOURCE}_CREATE_START,
+      })
+
+      export const ${2:resource}CreateRequest = (${2:resource}) => ({
+        type: ${1:RESOURCE}_CREATE_REQUEST,
+        ${2:resource},
+      })
+
+      export const ${2:resource}CreateSuccess = (${2:resource}) => ({
+        type: ${1:RESOURCE}_CREATE_SUCCESS,
+        ${2:resource},
+      })
+
+      export const ${2:resource}CreateFailure = (error) => ({
+        type: ${1:RESOURCE}_CREATE_FAILURE,
+        error,
+      })
+
+      export const ${2:resource}Create = (${2:resource}) => {
+        return (dispatch) => {
+          dispatch(${2:resource}CreateRequest(${2:resource}))
+          dispatch(serverAction(${2:resource}CreateRequest(${2:resource})))
+        }
+      }
+
+      export const ${2:resource}DeleteStart = () => ({
+        type: ${1:RESOURCE}_DELETE_START,
+      })
+
+      export const ${2:resource}DeleteRequest = (${2:resource}) => ({
+        type: ${1:RESOURCE}_DELETE_REQUEST,
+        id: ${2:resource},
+      })
+
+      export const ${2:resource}DeleteSuccess = (${2:resource}) => ({
+        type: ${1:RESOURCE}_DELETE_SUCCESS,
+        ${2:resource},
+      })
+
+      export const ${2:resource}DeleteFailure = (error) => ({
+        type: ${1:RESOURCE}_DELETE_FAILURE,
+        error,
+      })
+
+      export const ${2:resource}Delete = (${2:resource}) => {
+        return (dispatch) => {
+          dispatch(${2:resource}DeleteRequest(${2:resource}))
+          dispatch(serverAction(${2:resource}DeleteRequest(${2:resource})))
+        }
+      }
+
+      export const ${2:resource}UpdateStart = () => ({
+        type: ${1:RESOURCE}_UPDATE_START,
+      })
+
+      export const ${2:resource}UpdateRequest = (${2:resource}) => ({
+        type: ${1:RESOURCE}_UPDATE_REQUEST,
+        id: ${2:resource},
+      })
+
+      export const ${2:resource}UpdateSuccess = (${2:resource}) => ({
+        type: ${1:RESOURCE}_UPDATE_SUCCESS,
+        ${2:resource},
+      })
+
+      export const ${2:resource}UpdateFailure = (error) => ({
+        type: ${1:RESOURCE}_UPDATE_FAILURE,
+        error,
+      })
+
+      export const ${2:resource}Update = (${2:resource}) => {
+        return (dispatch) => {
+          dispatch(${2:resource}UpdateRequest(${2:resource}))
+          dispatch(serverAction(${2:resource}UpdateRequest(${2:resource})))
+        }
+      }
+
+      export const ${2:resource}sFetchStart = () => ({
+        type: ${1:RESOURCE}S_FETCH_START,
+      })
+
+      export const ${2:resource}sFetchRequest = (${2:resource}) => ({
+        type: ${1:RESOURCE}S_FETCH_REQUEST,
+        id: ${2:resource},
+      })
+
+      export const ${2:resource}sFetchSuccess = (${2:resource}) => ({
+        type: ${1:RESOURCE}S_FETCH_SUCCESS,
+        ${2:resource},
+      })
+
+      export const ${2:resource}sFetchFailure = (error) => ({
+        type: ${1:RESOURCE}S_FETCH_FAILURE,
+        error,
+      })
+
+      export const ${2:resource}sFetch = (${2:resource}) => {
+        return (dispatch) => {
+          dispatch(${2:resource}sFetchRequest(${2:resource}))
+          dispatch(serverAction(${2:resource}sFetchRequest(${2:resource})))
+        }
+      }
+
+
+    """

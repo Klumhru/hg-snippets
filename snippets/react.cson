@@ -27,3 +27,8 @@
       }
 
     """
+  'React PropType item':
+    'prefix': 'rpti'
+    'body': """
+      ${1:prop}: PropTypes.${2:type}.isRequired,
+    """
